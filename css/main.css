@@ -94,6 +94,13 @@ header {
     display: flex;
     justify-content: space-around;
 }
+.checkbox-item input[type="checkbox"] {
+    position: relative;
+    top: 25px;
+}
+.checkbox-item label {
+    margin-left: 35px;
+}
 
 .header-form {
     display: flex;
@@ -136,8 +143,8 @@ header {
 
 .search-container {
     position: relative;
-    width: 965px; /* Adjust this to change the width of the search bar */
-    margin: 0 auto; /* This centers the search bar */
+    width: 965px;
+    margin: 0 auto;
 }
 
 .searchbar {
@@ -180,7 +187,7 @@ header {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     background-color: white;
-    margin: 20px auto 50px; /* Adjusted margin-bottom to create space after the card */
+    margin: 20px auto 50px;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -289,3 +296,4 @@ td:last-child {
 .img-line span {
     margin-right: 10px;
 }
+
