@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Junhee Park">
+    <meta name="description" content="Main Page of the Nanobody Prediction Tool">
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <title>Nanobody Prediction Tool</title>
+    
+    <!-- normalize.css for cross-browser stuff -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    
+    <!--Link to my css -->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body class="container">
+    <nav>
+        <img src="img/menu.png" alt="menu-icon" class="menu-icon">
+        <h1>NANOBODY PREDICTION TOOL</h1>
+        <li><a href="#">Log-In</a></li>
+    </nav>
+    <header>
+        <div class="header-form">
+            <div class="form-group">
+                <label class="organism">Nanobody Organism:</label>
+                <select class="organism-option">
+                    <option value="select">Select</option>
+                    <option>Llama glama</option>
+                    <option>Vicugna pacos</option>
+                    <option>Camelius dromedarius</option>
+                    <option>Others</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mutation">Top # of mutation combos to list:</label>
+                <input class= "mutation" type="text" id="top_num_mutation" placeholder="Type...">
+            </div>
+        </div>
+        <div class="form-group" id="predict">
+            <div class="predict-wrapper">
+                <label>What would you like to predict?</label>
+                <select class="predict">
+                    <option value="select">Select</option>
+                    <option>Mutation combo to generate antigen-dependent stability</option>
+                    <option>Mutation combo to increase antigen-independent stability</option>
+                    <option>Both</option>
+                </select>
+            </div> 
+        </div>
+        <div class="form-group">
+            <div class="algorithm">
+                <label>Algorithm Selection:</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox">
+                        <label>Stability Prediction Neural Network</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox">
+                        <label>Interface Prediction Neural Network</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox">
+                        <label>Mutation combo Prediction Neural Network</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <form>
+            <div class="search-container">
+                <input class="searchbar" type="text" placeholder="Type/paste sequence here...">
+                <a href="result_page.html">
+                    <button class="search-button" type="button">
+                        <img src="img/search-button.png" alt="search-icon" class="search-icon">
+                    </button>
+                </a>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
