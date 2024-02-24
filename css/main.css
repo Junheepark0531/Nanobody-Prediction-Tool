@@ -96,11 +96,49 @@ header {
 }
 .checkbox-item input[type="checkbox"] {
     position: relative;
-    top: 25px;
+
 }
+
 .checkbox-item label {
-    margin-left: 35px;
+    margin-top: 20px;
 }
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox] + label {
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+input[type=checkbox] + label:before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 11px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    transition: border 0.3s ease;
+    background-color: white;
+}
+
+input[type=checkbox]:hover + label:before {
+    border: 2px solid #4291DB;
+}
+
+input[type=checkbox]:checked + label:before {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDkgNDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBvbHlsaW5lIGlkPSJQYXRoIiBzdHJva2U9IiM0MjkxREIiIHN0cm9rZS13aWR0aD0iMTEiIHBvaW50cz0iMy43NTY1MzE0OCAxOC45ODA0MDUyIDIyLjc1Mzc0MjQgMzMuMDg5OTk4NiA0NC41ODgzMTcxIDMuNDk1NDY5MjIiPjwvcG9seWxpbmU+PC9nPjwvc3ZnPg==');
+    background-repeat: no-repeat;
+    background-position: center left 1.5px;
+    background-size: 75%;
+    border-radius: 3px;
+    border: 2px solid #4291DB;
+}
+/*  */
 
 .header-form {
     display: flex;
@@ -296,4 +334,3 @@ td:last-child {
 .img-line span {
     margin-right: 10px;
 }
-
