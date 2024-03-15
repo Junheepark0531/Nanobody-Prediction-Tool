@@ -28,13 +28,13 @@
     <nav>
         <img src="img/menu.png" alt="menu-icon" class="menu-icon">
         <h1>NANOBODY PREDICTION TOOL</h1>
-        <li><a href="#">Log-In</a></li>
+        <li><a class="log-in" href="#">Log-In</a></li>
     </nav>
     <header>
         <div class="header-form">
             <div class="form-group">
                 <label class="organism">Nanobody Organism:</label>
-                <select class="organism-option">
+                <select class="organism-option" id="nanobody_organism">
                     <option value="select">Select</option>
                     <option>Llama glama</option>
                     <option>Vicugna pacos</option>
@@ -60,11 +60,11 @@
         </div>
         <div class="form-group">
             <div class="algorithm">
-                <label>Algorithm Selection:</label>
+                <label id="algorithm-label" for="algorithm-selection">Algorithm Selection:</label>
                 <div class="checkbox-group">
                     <div class="checkbox-item">
                         <input type="checkbox" id="myCheckbox1">
-                        <label for="myCheckbox1">Stability Prediction Neural Network</label>
+                        <label id="checkbox1" for="myCheckbox1">Stability Prediction Neural Network</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="myCheckbox2">
