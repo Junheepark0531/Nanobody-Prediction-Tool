@@ -1,0 +1,86 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name='viewport' content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Junhee Park">
+        <meta name="description" content="result Page of the Nanobody Prediction Tool">
+        <link rel="icon" type="image/png" href="img/favicon.png" />
+        <title>Nanobody Prediction Tool</title>
+        
+        <!-- normalize.css for cross-browser stuff -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:wght@300&display=swap" rel="stylesheet">
+        
+        <!--Link to my css -->
+        <!-- <link rel="stylesheet" href="css/main.css"> -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+    </head>
+    <body class="container">
+        <nav>
+            <img src="{{ url_for('static', filename='img/menu.png') }}" alt="menu-icon" class="menu-icon">
+            <h1>NANOBODY PREDICTION TOOL</h1>
+            <li><a class="log-in" href="#">Log-In</a></li>
+        </nav>
+        <main>
+            <div class="card">
+                <a href="/">
+                    <button class="close">X</button>
+                </a>
+                <h2>Results</h2>
+                <p>95% confidence that this nanobody will be unstable upon expression in human 293T cells</p>
+                <p class="group">Group 1</p>
+                <img src="{{ url_for('static', filename='img/group-1.png') }}" alt="Group 1">
+                <p class="strands">High C Strands</p>
+                <table>
+                    <tr>
+                    <th>Mutation Combo</th>
+                    <th>Img#        11111111222222222-34444444444555555-666677777777778888888888999999999900000-11222222222
+                        12345678901234567890123456-90123456789012345-678901234567890123456789012345678901234-89012345678</th>
+                    <th>Confidence</th>
+                    <th>Download FASTA</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="img-line">                     -        P                        -    T   V         G      W    ST-    T                                    R          L              - R  P</td>
+                        <td>98%</td>
+                        <td><a href="#">Click here to download</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="img-line">           V       - A     P                        -    R   Y                  W      G-SS        E                       D R                          -</td>
+                        <td>93%</td>
+                        <td><a href="#">Click here to download</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="img-line">              -                  T              -                                          -LF                    N                   R          T   N   L F T   LF    -</td>
+                        <td>80%</td>
+                        <td><a href="#">Click here to download</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="img-line">                    -         P                        -   S    V         G L   W   SG-   S        T AP                               I  L         </td>
+                        <td>70%</td>
+                        <td><a href="#">Click here to download</a></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td class="img-line">            V  T  -         P        T         G  - I                      H   W LVC-   V        V                  A          </td>
+                        <td>50%</td>
+                        <td><a href="#">Click here to download</a></td>
+                    </tr>
+                </table> 
+            </div>     
+        </main>
+
+    </body>
+    </html>
