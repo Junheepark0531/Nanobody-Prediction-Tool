@@ -1,5 +1,6 @@
 .DS_Store
 test-predict.ipynb
+model-5e-05-96-0.001-10
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
