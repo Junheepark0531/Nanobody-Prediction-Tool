@@ -36,8 +36,8 @@
                     <button class="close">X</button>
                 </a>
                 <h2>Results</h2>
-                <p>95% confidence that this nanobody will be unstable upon expression in human 293T cells</p>
-                <p class="group">Group 1</p>
+                <p>{{ data.percentage }}% confidence that this nanobody will be {{ data.stability }} upon expression in {{ data.cell }}</p>
+                <p class="group">{{ data.group }}</p>
                 <img src="{{ url_for('static', filename='img/group-1.png') }}" alt="Group 1">
                 <p class="strands">High C Strands</p>
                 <table>
