@@ -12,6 +12,9 @@ TOKENIZER = "qilowoq/AbLang_heavy"  # From HuggingFace
 
 class PredictionPipeline:
   def __init__(self, sequence: str):
+    """
+    sequence to get stability prediction for
+    """
     if len(sequence) > MAX_SEQ_LEN:
       raise ValueError(
         f"Sequence is too long.\nSequence length = {len(sequence)}, MAX_SEQ_LEN = {MAX_SEQ_LEN}"
@@ -19,6 +22,14 @@ class PredictionPipeline:
     self.seq = sequence
   
   def predict(self):
+    """
+    Runs self.seq through the model to get a stability prediction.
+    Returns a dictionary that looks like:
+    {
+      'prediction' : "STABLE" or "UNSTABLE",
+      'likelihood' : <likelihood of prediction> (float in range [0,1])
+    }
+    """
     # Load model and tokenizer
     tokenizer = AutoTokenizer.from_pretrained(TOKENIZER)
     model = AutoModelForSequenceClassification.from_pretrained(MODEL_PATH)
